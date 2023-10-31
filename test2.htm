@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en-us"><!-- Server: EC2AMAZ-0P5T9P2 --><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title></title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="robots" content="noindex">
+    <style type="text/css" data-tippy-stylesheet="">.tippy-iOS{cursor:pointer!important;-webkit-tap-highlight-color:transparent}.tippy-popper{transition-timing-function:cubic-bezier(.165,.84,.44,1);max-width:calc(100% - 8px);pointer-events:none;outline:0}.tippy-popper[x-placement^=top] .tippy-backdrop{border-radius:40% 40% 0 0}.tippy-popper[x-placement^=top] .tippy-roundarrow{bottom:-7px;bottom:-6.5px;-webkit-transform-origin:50% 0;transform-origin:50% 0;margin:0 3px}.tippy-popper[x-placement^=top] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(180deg);transform:rotate(180deg)}.tippy-popper[x-placement^=top] .tippy-arrow{border-top:8px solid #333;border-right:8px solid transparent;border-left:8px solid transparent;bottom:-7px;margin:0 3px;-webkit-transform-origin:50% 0;transform-origin:50% 0}.tippy-popper[x-placement^=top] .tippy-backdrop{-webkit-transform-origin:0 25%;transform-origin:0 25%}.tippy-popper[x-placement^=top] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-55%);transform:scale(1) translate(-50%,-55%)}.tippy-popper[x-placement^=top] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-50%,-45%);transform:scale(.2) translate(-50%,-45%);opacity:0}.tippy-popper[x-placement^=top] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateY(-20px);transform:translateY(-20px)}.tippy-popper[x-placement^=top] [data-animation=perspective]{-webkit-transform-origin:bottom;transform-origin:bottom}.tippy-popper[x-placement^=top] [data-animation=perspective][data-state=visible]{-webkit-transform:perspective(700px) translateY(-10px);transform:perspective(700px) translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:perspective(700px) rotateX(60deg);transform:perspective(700px) rotateX(60deg)}.tippy-popper[x-placement^=top] [data-animation=fade][data-state=visible]{-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=shift-away][data-state=hidden]{opacity:0}.tippy-popper[x-placement^=top] [data-animation=scale]{-webkit-transform-origin:bottom;transform-origin:bottom}.tippy-popper[x-placement^=top] [data-animation=scale][data-state=visible]{-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateY(-10px) scale(.5);transform:translateY(-10px) scale(.5)}.tippy-popper[x-placement^=bottom] .tippy-backdrop{border-radius:0 0 30% 30%}.tippy-popper[x-placement^=bottom] .tippy-roundarrow{top:-7px;-webkit-transform-origin:50% 100%;transform-origin:50% 100%;margin:0 3px}.tippy-popper[x-placement^=bottom] .tippy-roundarrow svg{position:absolute;left:0}.tippy-popper[x-placement^=bottom] .tippy-arrow{border-bottom:8px solid #333;border-right:8px solid transparent;border-left:8px solid transparent;top:-7px;margin:0 3px;-webkit-transform-origin:50% 100%;transform-origin:50% 100%}.tippy-popper[x-placement^=bottom] .tippy-backdrop{-webkit-transform-origin:0 -50%;transform-origin:0 -50%}.tippy-popper[x-placement^=bottom] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-45%);transform:scale(1) translate(-50%,-45%)}.tippy-popper[x-placement^=bottom] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-50%);transform:scale(.2) translate(-50%);opacity:0}.tippy-popper[x-placement^=bottom] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateY(20px);transform:translateY(20px)}.tippy-popper[x-placement^=bottom] [data-animation=perspective]{-webkit-transform-origin:top;transform-origin:top}.tippy-popper[x-placement^=bottom] [data-animation=perspective][data-state=visible]{-webkit-transform:perspective(700px) translateY(10px);transform:perspective(700px) translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:perspective(700px) rotateX(-60deg);transform:perspective(700px) rotateX(-60deg)}.tippy-popper[x-placement^=bottom] [data-animation=fade][data-state=visible]{-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=shift-away][data-state=hidden]{opacity:0}.tippy-popper[x-placement^=bottom] [data-animation=scale]{-webkit-transform-origin:top;transform-origin:top}.tippy-popper[x-placement^=bottom] [data-animation=scale][data-state=visible]{-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateY(10px) scale(.5);transform:translateY(10px) scale(.5)}.tippy-popper[x-placement^=left] .tippy-backdrop{border-radius:50% 0 0 50%}.tippy-popper[x-placement^=left] .tippy-roundarrow{right:-12px;-webkit-transform-origin:33.33333333% 50%;transform-origin:33.33333333% 50%;margin:3px 0}.tippy-popper[x-placement^=left] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(90deg);transform:rotate(90deg)}.tippy-popper[x-placement^=left] .tippy-arrow{border-left:8px solid #333;border-top:8px solid transparent;border-bottom:8px solid transparent;right:-7px;margin:3px 0;-webkit-transform-origin:0 50%;transform-origin:0 50%}.tippy-popper[x-placement^=left] .tippy-backdrop{-webkit-transform-origin:50% 0;transform-origin:50% 0}.tippy-popper[x-placement^=left] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-50%);transform:scale(1) translate(-50%,-50%)}.tippy-popper[x-placement^=left] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-75%,-50%);transform:scale(.2) translate(-75%,-50%);opacity:0}.tippy-popper[x-placement^=left] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateX(-20px);transform:translateX(-20px)}.tippy-popper[x-placement^=left] [data-animation=perspective]{-webkit-transform-origin:right;transform-origin:right}.tippy-popper[x-placement^=left] [data-animation=perspective][data-state=visible]{-webkit-transform:perspective(700px) translateX(-10px);transform:perspective(700px) translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:perspective(700px) rotateY(-60deg);transform:perspective(700px) rotateY(-60deg)}.tippy-popper[x-placement^=left] [data-animation=fade][data-state=visible]{-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=shift-away][data-state=hidden]{opacity:0}.tippy-popper[x-placement^=left] [data-animation=scale]{-webkit-transform-origin:right;transform-origin:right}.tippy-popper[x-placement^=left] [data-animation=scale][data-state=visible]{-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateX(-10px) scale(.5);transform:translateX(-10px) scale(.5)}.tippy-popper[x-placement^=right] .tippy-backdrop{border-radius:0 50% 50% 0}.tippy-popper[x-placement^=right] .tippy-roundarrow{left:-12px;-webkit-transform-origin:66.66666666% 50%;transform-origin:66.66666666% 50%;margin:3px 0}.tippy-popper[x-placement^=right] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(-90deg);transform:rotate(-90deg)}.tippy-popper[x-placement^=right] .tippy-arrow{border-right:8px solid #333;border-top:8px solid transparent;border-bottom:8px solid transparent;left:-7px;margin:3px 0;-webkit-transform-origin:100% 50%;transform-origin:100% 50%}.tippy-popper[x-placement^=right] .tippy-backdrop{-webkit-transform-origin:-50% 0;transform-origin:-50% 0}.tippy-popper[x-placement^=right] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-50%);transform:scale(1) translate(-50%,-50%)}.tippy-popper[x-placement^=right] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-25%,-50%);transform:scale(.2) translate(-25%,-50%);opacity:0}.tippy-popper[x-placement^=right] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateX(20px);transform:translateX(20px)}.tippy-popper[x-placement^=right] [data-animation=perspective]{-webkit-transform-origin:left;transform-origin:left}.tippy-popper[x-placement^=right] [data-animation=perspective][data-state=visible]{-webkit-transform:perspective(700px) translateX(10px);transform:perspective(700px) translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:perspective(700px) rotateY(60deg);transform:perspective(700px) rotateY(60deg)}.tippy-popper[x-placement^=right] [data-animation=fade][data-state=visible]{-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=shift-away][data-state=hidden]{opacity:0}.tippy-popper[x-placement^=right] [data-animation=scale]{-webkit-transform-origin:left;transform-origin:left}.tippy-popper[x-placement^=right] [data-animation=scale][data-state=visible]{-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateX(10px) scale(.5);transform:translateX(10px) scale(.5)}.tippy-tooltip{position:relative;color:#fff;border-radius:.25rem;font-size:.875rem;padding:.3125rem .5625rem;line-height:1.4;text-align:center;background-color:#333}.tippy-tooltip[data-size=small]{padding:.1875rem .375rem;font-size:.75rem}.tippy-tooltip[data-size=large]{padding:.375rem .75rem;font-size:1rem}.tippy-tooltip[data-animatefill]{overflow:hidden;background-color:initial}.tippy-tooltip[data-interactive],.tippy-tooltip[data-interactive] .tippy-roundarrow path{pointer-events:auto}.tippy-tooltip[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-tooltip[data-inertia][data-state=hidden]{transition-timing-function:ease}.tippy-arrow,.tippy-roundarrow{position:absolute;width:0;height:0}.tippy-roundarrow{width:18px;height:7px;fill:#333;pointer-events:none}.tippy-backdrop{position:absolute;background-color:#333;border-radius:50%;width:calc(110% + 2rem);left:50%;top:50%;z-index:-1;transition:all cubic-bezier(.46,.1,.52,.98);-webkit-backface-visibility:hidden;backface-visibility:hidden}.tippy-backdrop:after{content:"";float:left;padding-top:100%}.tippy-backdrop+.tippy-content{transition-property:opacity;will-change:opacity}.tippy-backdrop+.tippy-content[data-state=hidden]{opacity:0}</style><link rel="apple-touch-icon" sizes="180x180" href="https://www.rev.com/Content/img/rev/favicons/apple-touch-icon.png?v=RymW3lzQY9">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.rev.com/Content/img/rev/favicons/favicon-32x32.png?v=RymW3lzQY9">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.rev.com/Content/img/rev/favicons/favicon-16x16.png?v=RymW3lzQY9">
+<link rel="manifest" href="https://www.rev.com/Content/img/rev/favicons/manifest.json?v=RymW3lzQY9">
+<link rel="mask-icon" href="https://www.rev.com/Content/img/rev/favicons/safari-pinned-tab.svg?v=RymW3lzQY9" color="#ee3524">
+<link rel="shortcut icon" href="https://www.rev.com/Content/img/rev/favicons/favicon.ico?v=RymW3lzQY9">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/Content/img/rev/favicons/browserconfig.xml?v=RymW3lzQY9">
+<meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" async="" src="337270532_fichiers/ZVuqz9NiMNkf2yBsrrcz8ihnGvhbfGfF.min.js"></script><script type="text/javascript">
+    (function () {
+        var now = new Date();
+        var offset = 0 - now.getTimezoneOffset();
+        var expire = new Date();
+        expire.setFullYear(now.getFullYear() + 5);
+        document.cookie = 'ft_tz=' + escape(offset) + ';expires=' + expire.toGMTString() + ';path=/'
+    })();
+</script>
+    <script>
+    (function() {
+        var d = document;
+        var c = d.createElement('script');
+        if (!('noModule' in c) && 'onbeforeload' in c) {
+            var s = false;
+            d.addEventListener('beforeload', function(e) {
+            if (e.target === c) {
+                s = true;
+            } else if (!e.target.hasAttribute('nomodule') || !s) {
+                return;
+            }
+            e.preventDefault();
+            }, true);
+
+            c.type = 'module';
+            c.src = '.';
+            d.head.appendChild(c);
+            c.remove();
+        }
+    }());
+</script>
+    <script src="337270532_fichiers/polyfills.bundle.js" nomodule=""></script>
+    
+        
+
+        
+
+<script>
+    !function () {
+        window.segmentTrackingEnabled = true;
+        var analytics = window.analytics = window.analytics || []; if (!analytics.initialize) if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice."); else {
+            analytics.invoked = !0; analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on", "addSourceMiddleware", "addIntegrationMiddleware", "setAnonymousId", "addDestinationMiddleware"]; analytics.factory = function (e) { return function () { var t = Array.prototype.slice.call(arguments); t.unshift(e); analytics.push(t); return analytics } }; for (var e = 0; e < analytics.methods.length; e++) { var key = analytics.methods[e]; analytics[key] = analytics.factory(key) } analytics.load = function (key, e) { var t = document.createElement("script"); t.type = "text/javascript"; t.async = !0; t.src = 'https://evs.bubo-bubo.rev.com/vuJKUsyQcbGfLatMF8YUDz/ZVuqz9NiMNkf2yBsrrcz8ihnGvhbfGfF.min.js'; var n = document.getElementsByTagName("script")[0]; n.parentNode.insertBefore(t, n); analytics._loadOptions = e }; analytics._writeKey = 'wIB1Bc2VLRcHHhnLOXttPu4gqFN8LJsy';
+                analytics._cdn = 'https://evs.bubo-bubo.rev.com';
+            analytics.SNIPPET_VERSION = "4.15.3";
+            if (true) {
+                analytics.load('wIB1Bc2VLRcHHhnLOXttPu4gqFN8LJsy', {
+                  integrations: {
+                    "Segment.io": {
+                      deliveryStrategy: {
+                        strategy: "batching",
+                        config: {
+                          size: 20,
+                          timeout: 5000
+                        }
+                      }
+                    }
+                  }
+                });
+                analytics.ready(function () {
+                    const gaIsDefined = typeof (ga) === "function";
+                    const isCustomer = "revvers" === "customers";
+                    if (!(gaIsDefined && isCustomer)) {
+                        window.analytics.page({"isMobile":"false"});
+                    } else {
+                        ga(function (defaultTracker) {
+                            // Default tracker may be undefined if window.ga has been loaded via GTM tag instead of
+                            // GA snippet and ga('create') has not been called directly (as it is in the shared
+                            // "_google-analytics" partial)
+                            // This will try to use the client ID from GTM's tag-specific tracker (usually the
+                            // first/only tracker returned by ga.getAll) if the default doesn't exist
+                            const tracker = defaultTracker || ga.getAll()[0]
+                            // Don't send GA client ID in Segment event if there's no tracker
+                            if (!tracker) {
+                                return window.analytics.page({"isMobile":"false"});
+                            }
+                            const clientId = tracker.get("clientId");
+                            const externalIdObject =
+                            {
+                                externalIds: [
+                                    {
+                                        id: clientId,
+                                        type: "ga_client_id",
+                                        collection: "users",
+                                        encoding: "none"
+                                    }
+                                ]
+                            };
+                            window.analytics.page({"isMobile":"false"}, externalIdObject);
+                        });
+                    }
+                });
+            }
+        }
+
+        // Send "isMobile" property along with all segment calls
+        analytics.addSourceMiddleware(({ payload, next }) => {
+            payload.obj.properties = payload.obj.properties || {};
+            payload.obj.properties.isMobile = "false";
+            next(payload);
+        });
+    }();
+</script>
+
+<script type="text/javascript">
+    window.segmentReset = () => {
+        if (window.analytics) {
+            window.analytics.reset();
+        }
+    }
+</script>
+
+    
+    <script src="337270532_fichiers/jquery.js"></script>
+    <link href="337270532_fichiers/v2-bootstrap3.css" type="text/css" rel="stylesheet">
+    <script src="337270532_fichiers/bootstrap.js"></script>
+    <link href="337270532_fichiers/v2-app.css" type="text/css" rel="stylesheet">
+        
+    <script src="337270532_fichiers/common.js"></script>
+    <script src="337270532_fichiers/common.bundle.js"></script>
+    <link href="337270532_fichiers/workspace.css" type="text/css" rel="stylesheet">
+    <script src="337270532_fichiers/workspace.js"></script>
+    <script src="337270532_fichiers/workspace.bundle.js"></script>
+    <script src="337270532_fichiers/react.js"></script>
+        
+    
+    <link href="337270532_fichiers/workspace-view-file.css" type="text/css" rel="stylesheet">
+
+        
+
+    <link href="337270532_fichiers/icon.css" rel="stylesheet">
+</head>
+
+<body class="app">
+<div id="page">
+    <div id="main">
+        
+
+
+<nav class="navbar navbar-static-top">
+    <div class="container">
+        <div class="navbar-header pull-left">
+            <a class="navbar-brand" href="https://www.rev.com/workspace"><span class="ultra-logo rev-logo"></span></a>
+        </div>
+        <ul class="nav">
+                <li class="nav-item dropdown" id="menu-findwork">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    Find Work
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu pull-left">
+            
+                        <li>
+                            <a class="menu-item" id="findwork-subtitle" href="https://www.rev.com/workspace/findwork/subtitle" target="">
+                                Subtitle
+                            </a>
+                        </li>
+                    </ul></li>
+                <li class="nav-item dropdown" id="menu-mywork">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    My Work
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu pull-left">
+            
+                        <li>
+                            <a class="menu-item" id="" href="https://www.rev.com/workspace/mywork" target="">
+                                My Projects
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="menu-item" id="" href="https://www.rev.com/workspace/earnings" target="">
+                                Earnings
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="menu-item" id="" href="https://www.rev.com/workspace/metrics" target="">
+                                Metrics
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="menu-item" id="" href="https://www.rev.com/workspace/customerfeedback" target="">
+                                Customer Feedback
+                            </a>
+                        </li>
+                    </ul></li>
+                <li class="nav-item dropdown" id="menu-resources">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    Resources
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu pull-left">
+            
+                        <li>
+                            <a class="menu-item" id="" href="https://www.rev.com/atlas/sandbox" target="_blank">
+                                Explore Atlas
+                            </a>
+                        </li>
+                    </ul></li>
+                <li class="nav-item dropdown" id="menu-help">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    Help
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu pull-left">
+            
+                        <li>
+                            <a class="menu-item" id="nav-item-gethelp" href="https://support.rev.com/hc/en-us/articles/218028428" target="_blank">
+                                Get Help
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="menu-item" id="nav-item-helpcenter" href="https://support.rev.com/hc/en-us/categories/360002275571-Revver-Support" target="_blank">
+                                Help Center
+                            </a>
+                        </li>
+                    </ul></li>
+                <li class="nav-item">
+                <a href="https://forum.rev.com/" id="nav-item-forum" target="_blank">
+                    Forum
+                </a>
+            </li>
+        </ul>
+        <div class="pull-right">
+            <ul class="nav nav-user">
+                    <li class="nav-item dropdown" id="menu-account">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    Hello, <b>Léo</b>
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu pull-right">
+            
+                        <li>
+                            <a class="menu-item" id="" href="https://www.rev.com/account/settings" target="">
+                                Settings
+                            </a>
+                        </li>
+                    
+                        <form class="menu-item _navbar" method="post" action="/account/auth/logout">
+                    <input name="__RequestVerificationToken" type="hidden" value="A2exjzmDQ79XHnmOns4SMuSi6Zus2xe38RLHU2eBLjmDJrvOI1JMndzwlyWuBdldXNjZLYR6FKBM4IHJhGZEDiXDWTXfWoMesP6sN0evkPzzRP4R0">
+                        <input id="returnUrl" name="returnUrl" type="hidden" value="/">
+                        <button tabindex="-1" class="ws-submit pointer bg-transparent pa0 button-as-link">
+                            Sign Off
+                        </button>
+                    </form></ul></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="downtime-warning-banner-container"></div>
+    <div class="nav-breadcrumb"><div class="container"><ul class="breadcrumb"><li><a href="https://www.rev.com/workspace/findwork"><span class="home-icon"></span></a></li><li class="active">My Work</li></ul></div></div>
+
+    
+
+        
+        
+
+
+        
+
+
+<div class="container">
+    
+
+
+<div class="resource-review">
+    
+        <div class="row">
+            <div class="container">
+                
+
+
+<div class="row">
+    <h3>English Captions Srt</h3>
+    <div class="right">
+        <span class="title">Job</span>
+        SU1017278650P-2
+    </div>
+    <div class="right">
+        <span class="title">Words</span>
+        77
+    </div>
+    <div class="right">
+        <span class="title">Captions</span>
+         16
+    </div>
+</div>
+<div class="row">
+        <table class="caption-file">
+                <tbody><tr>
+                    <td>00:00:00</td>
+                    <td>(dramatic music)</td>
+                </tr>
+                <tr>
+                    <td>00:00:01</td>
+                    <td>- We heard that Alexander Daigle,</td>
+                </tr>
+                <tr>
+                    <td>00:00:02</td>
+                    <td>the number one pick that wasn't,</td>
+                </tr>
+                <tr>
+                    <td>00:00:04</td>
+                    <td>was in Davos and had this, like, new lease on life.</td>
+                </tr>
+                <tr>
+                    <td>00:00:08</td>
+                    <td>- [Sportscaster] There are no holes</td>
+                </tr>
+                <tr>
+                    <td>00:00:09</td>
+                    <td>in Alexander Daigle's game.</td>
+                </tr>
+                <tr>
+                    <td>00:00:11</td>
+                    <td>(athlete exclaims)</td>
+                </tr>
+                <tr>
+                    <td>00:00:12</td>
+                    <td>- [Narrator 1] They were expecting him</td>
+                </tr>
+                <tr>
+                    <td>00:00:13</td>
+                    <td>to be some kind of savior.</td>
+                </tr>
+                <tr>
+                    <td>00:00:15</td>
+                    <td>- [Narrator 2] Everywhere he went, cheers and scream.</td>
+                </tr>
+                <tr>
+                    <td>00:00:17</td>
+                    <td>It was awe-inspiring.</td>
+                </tr>
+                <tr>
+                    <td>00:00:19</td>
+                    <td>- [Narrator 3] Once you think you're arrived,</td>
+                </tr>
+                <tr>
+                    <td>00:00:20</td>
+                    <td>you're as good as gone.</td>
+                </tr>
+                <tr>
+                    <td>00:00:21</td>
+                    <td>- [Alexander] I never recaptured the edge. I have.</td>
+                </tr>
+                <tr>
+                    <td>00:00:24</td>
+                    <td>Maybe there's more to it.</td>
+                </tr>
+                <tr>
+                    <td>00:00:26</td>
+                    <td>(dramatic music)</td>
+                </tr>
+        </tbody></table>
+</div>
+            </div>
+        </div>
+</div>
+</div>
+
+
+        <div class="push"></div>
+    </div>
+    
+    <footer>
+        <div id="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="span3 col-sm-2">Copyright Rev 2023.</div>
+                    <div class="span4 col-sm-4">
+                        <a href="https://www.rev.com/about/terms" rel="nofollow">Terms of Service</a> |
+                        <a href="https://www.rev.com/about/privacy" rel="nofollow">Privacy Policy</a>
+                    </div>
+                        <div class="span5 contact-info col-sm-6">Need help? Email us at: <a href="mailto:support@rev.com">support@rev.com</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+        <script type="text/javascript">
+            if (window.TcRookieProgressInit) {
+                window.TcRookieProgressInit(10220460, false);
+            }
+        </script>
+    
+            <script>
+              window.analytics.identify(10220460, 
+                {"first_name":"Léo","last_name":"Peyronnet","email":"peyronnet.leo@gmail.com","category":"Identify"});
+            </script>
+        
+
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>
