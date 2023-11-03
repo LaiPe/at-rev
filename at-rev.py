@@ -31,25 +31,30 @@ def compta_caracteres(li):
     return result
 
 def traduction(li):
+    from google.cloud import translate_v2 as translate
+    translate_client = translate.Client()
     li_trad = []
+
     for e in li:
-        li_trad += [appel_api(e)]
+        if isinstance(e, bytes):
+            e = e.decode("utf-8")
+        
+        result = translate_client.translate(e, target_language="fr")
+        li_trad += [result["translatedText"]]
     return li_trad
 
-def modifications(li,dict):
+def modifications(li,dict_modifs):
     li_modif = []
-    temp = ""
     cpt = 0
     for chain in li:
-        for letter in chain:
-            if letter in dict:
+        chain_modif = chain
+        for key in dict_modifs:
+            if key in chain:
                 cpt += 1
-                temp += dict[letter]
-            else:
-                temp += letter
-        li_modif += [temp]
-        temp = ""
-    print("\n=> ",cpt," modifs effectués\n",sep="")
+                chain_modif = chain_modif.replace(key, dict_modifs[key])
+        li_modif += [chain_modif]
+        
+    print("\n=> ",cpt," phrases modifiées\n",sep="")
     return li_modif
 
 
@@ -60,14 +65,16 @@ def ecriture(w,li):
 
 
 if __name__ == "__main__":
+
+    glossaire = {"&#39;":"'","\u2019":"'"}
+
     sys.stdout = open(sys.stdout.fileno(), mode='w', encoding='utf-8')
 
     if len(sys.argv) < 3 or sys.argv[2] != "-w":
         print("\nSyntaxe : at-rev.py <nom-du-fichier-input> -w <nom-du-fichier-output>\n")
         exit(1)
     
-    w = open(sys.argv[3],"w+")
-    
+    w = open(sys.argv[3],"w+", encoding='utf-8')
     
     f = open(sys.argv[1],"r")
     texte = f.read()
@@ -81,11 +88,14 @@ if __name__ == "__main__":
     print("- Reconstruction")
 
     print("\n=> ",compta_caracteres(liste_phrases_vo)," caractères envoyées à l'API Google Translate\n",sep="")
+    liste_phrases_traduites = traduction(liste_phrases_vo)
+    print("- Traduction")
 
-    list_phrases_trad_modif = modifications(liste_phrases_vo,{"’":"'"})
+    liste_phrases_traduites = modifications(liste_phrases_traduites,glossaire)
     print("- Modification")
 
-    ecriture(w,list_phrases_trad_modif)
+    ecriture(w,liste_phrases_traduites)
+    w.close()
     print("- Ecriture")
 
 
