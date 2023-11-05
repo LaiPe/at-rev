@@ -66,7 +66,7 @@ def ecriture(w,li):
 
 if __name__ == "__main__":
 
-    glossaire = {"&#39;":"'","\u2019":"'"}
+    glossaire = {"&#39;":"'","\u2019":"'","\xC2\xA0":" ","&amp;":"&"}
 
     sys.stdout = open(sys.stdout.fileno(), mode='w', encoding='utf-8')
 
@@ -75,8 +75,8 @@ if __name__ == "__main__":
         exit(1)
     
     w = open(sys.argv[3],"w+", encoding='utf-8')
-    
     f = open(sys.argv[1],"r")
+    
     texte = f.read()
     f.close()
     print("\n- Traitement du fichier",sys.argv[1])
