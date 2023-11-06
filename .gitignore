@@ -1,3 +1,4 @@
 env
 input.htm
 output.txt
+__pycache__
