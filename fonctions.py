@@ -30,11 +30,12 @@ def reconstruction(li_content):
             alast_car = ligne[len(ligne)-2] #Avant-dernier caractère de la ligne
             aalast_car = ligne[len(ligne)-3] #Avant-avant-dernier caractère de la ligne
 
-            caract_final = last_car == "." or last_car == "?" or last_car == "!" or last_car == ")"
+            caract_final = last_car == "." or last_car == "?" or last_car == "!"
+            didascalies = ligne[0] == "(" and last_car == ")"
             guillemets_final = last_car == '"' and (alast_car == "." or alast_car == "?" or alast_car == "!")
             points_suspens = last_car == "." and alast_car == "." and aalast_car == "."
 
-            if caract_final or guillemets_final or points_suspens: #Si cette ligne constitue une fin de phrase
+            if caract_final or guillemets_final or points_suspens or didascalies: #Si cette ligne constitue une fin de phrase
                 temp += ligne
                 temp_minute += [temp]
                 temp = ""
