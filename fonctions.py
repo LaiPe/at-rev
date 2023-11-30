@@ -42,7 +42,6 @@ def reconstruction(li_content):
             else:
                 temp += ligne + " "
         li_reconstruct += [temp_minute]
-        temp_minute = []
 
     return li_reconstruct
 
