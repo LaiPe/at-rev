@@ -87,12 +87,13 @@ def ecriture(w,li_content):
     from datetime import datetime, timedelta
     m = datetime(year=1, month=1, day=1, hour=0, minute=0) # Minute courante
     for minute in li_content:
-        for e in minute:
-            w.write(e)
-            w.write("\n\n")
         m = m + timedelta(minutes=1)
-        w.write("============== "+m.strftime("%H:%M")+" ==============")
-        w.write("\n\n")
+        if len(minute) > 0 :
+            for e in minute:
+                w.write(e)
+                w.write("\n\n")
+            w.write("============== "+m.strftime("%H:%M")+" ==============")
+            w.write("\n\n")
         
 
 def init_glossaire():
