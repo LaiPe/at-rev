@@ -65,7 +65,6 @@ def traduction(li):
             result = translate_client.translate(e, target_language="fr")
             temp_minute += [result["translatedText"]]
         li_trad += [temp_minute]
-        temp_minute = []
     return li_trad
 
 def modifications(li,dict_modifs):
