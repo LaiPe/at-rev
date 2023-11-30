@@ -86,14 +86,18 @@ def modifications(li,dict_modifs):
 def ecriture(w,li_content):
     from datetime import datetime, timedelta
     m = datetime(year=1, month=1, day=1, hour=0, minute=0) # Minute courante
+
+    w.write("============== Début ==============\n\n")
     for minute in li_content:
         m = m + timedelta(minutes=1)
         if len(minute) > 0 :
             for e in minute:
                 w.write(e)
                 w.write("\n\n")
-            w.write("============== "+m.strftime("%H:%M")+" ==============")
-            w.write("\n\n")
+            if m.minute < len(li_content):
+                w.write("============== "+m.strftime("%H:%M")+" ==============")
+                w.write("\n\n")
+    w.write("============== Fin ==============")
         
 
 def init_glossaire():
