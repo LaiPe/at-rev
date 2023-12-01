@@ -99,10 +99,10 @@ def ecriture(w,li_content):
     w.write("============== Fin ==============")
         
 
-def init_glossaire():
+def init_glossaire(directory):
     import csv
     dict = {}
-    f = open("glossaire.csv","r",encoding="UTF-8")
+    f = open(directory+"\\glossaire.csv","r",encoding="UTF-8")
     l = csv.reader(f,quotechar='+')
     for ligne in l:
         dict[ligne[0]] = ligne[1]

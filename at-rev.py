@@ -1,16 +1,17 @@
+import os
 import sys
 import fonctions as fnc
 
 if __name__ == "__main__":
 
     corect_options = ["-e","-r","-t","-c"]
-    sys.stdout = open(sys.stdout.fileno(), mode='w', encoding='utf-8')
 
     if len(sys.argv) < 3 or not(sys.argv[2] in corect_options):
         print("\nSyntaxe : at-rev.py <nom-du-fichier-input> -w <nom-du-fichier-output>\n")
         exit(1)
     
-    glossaire = fnc.init_glossaire()
+    chemin_absolu_script = os.path.dirname(os.path.abspath(__file__))
+    glossaire = fnc.init_glossaire(chemin_absolu_script)
     f = open(sys.argv[1],"r", encoding='utf-8')
     w = open(sys.argv[3],"w+", encoding='utf-8')
    
