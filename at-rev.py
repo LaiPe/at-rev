@@ -17,26 +17,27 @@ if __name__ == "__main__":
     
     chemin_absolu_script = os.path.dirname(os.path.abspath(__file__))
     glossaire = fnc.init_glossaire(chemin_absolu_script)
-    f = open(sys.argv[1],"r", encoding='utf-8')
-    w = open(sys.argv[3],"w+", encoding='utf-8')
+    
+    input = open(sys.argv[1],"r", encoding='utf-8')
+    output = open(sys.argv[3],"w+", encoding='utf-8')
    
-    texte = f.read()
-    f.close()
+    texte = input.read()
+    input.close()
     print("\n- Traitement du fichier",sys.argv[1])
 
     liste_lignes_vo = fnc.extraction(texte)
     print("- Extraction")
     if sys.argv[2] == "-e":
-        fnc.ecriture(w,liste_lignes_vo)
-        w.close()
+        fnc.ecriture(output,liste_lignes_vo)
+        output.close()
         print("- Ecriture")
         exit(0)
 
     liste_phrases_vo = fnc.reconstruction(liste_lignes_vo)
     print("- Reconstruction")
     if sys.argv[2] == "-r":
-        fnc.ecriture(w,liste_phrases_vo)
-        w.close()
+        fnc.ecriture(output,liste_phrases_vo)
+        output.close()
         print("- Ecriture")
         exit(0)
 
@@ -44,16 +45,16 @@ if __name__ == "__main__":
     liste_phrases_traduites = fnc.traduction(liste_phrases_vo)
     print("- Traduction")
     if sys.argv[2] == "-t":
-        fnc.ecriture(w,liste_phrases_traduites)
-        w.close()
+        fnc.ecriture(output,liste_phrases_traduites)
+        output.close()
         print("- Ecriture")
         exit(0)
     
     liste_phrases_traduites = fnc.modifications(liste_phrases_traduites,glossaire)
     print("- Modification")
     if sys.argv[2] == "-c":
-        fnc.ecriture(w,liste_phrases_traduites)
-        w.close()
+        fnc.ecriture(output,liste_phrases_traduites)
+        output.close()
         print("- Ecriture")
 
 
