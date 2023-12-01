@@ -4,7 +4,7 @@ def extraction(texte):
     
     soupe = BeautifulSoup(texte, "html.parser")
     td_list = soupe.find_all('td') # Ensemble des tags <td> de la page
-    content_list = [] # Ensemble du contenu
+    content_list = [] # Ensemble du contenu ; liste de listes qui repésentent chacune une minute
     current_minute = time(hour=0, minute=0) # Minute en cours
     temp = [] # Ensemble des entrées contenue dans la minute en cours
 
@@ -15,13 +15,13 @@ def extraction(texte):
             lecture_minute = time(hour=int(td_list[i].string[0:2]), minute=int(td_list[i].string[3:5])) # Formatage de la minute lue pour comparaison
             if lecture_minute > current_minute: # Si la minute lu est supérieure à la minute en cours 
                 current_minute = lecture_minute # Passage à la nouvelle minute
-                content_list += [temp]
-                temp = []
-    content_list += [temp]
+                content_list += [temp] # Ajout de la liste de la minute passée à la liste finale
+                temp = [] # Vide la mémoire tampon
+    content_list += [temp] #flush final
     return content_list
 
 def reconstruction(li_content):
-    li_reconstruct = []
+    li_reconstruct = [] 
     temp = ""
     for minute in li_content:
         temp_minute = []
