@@ -7,7 +7,12 @@ if __name__ == "__main__":
     corect_options = ["-e","-r","-t","-c"]
 
     if len(sys.argv) < 3 or not(sys.argv[2] in corect_options):
-        print("\nSyntaxe : at-rev.py <nom-du-fichier-input> -w <nom-du-fichier-output>\n")
+        print("\nSyntaxe : python at-rev.py <nom-du-fichier-input> <etape-finale-processus> <nom-du-fichier-output>\n")
+        print("<etape-finale-processus> :")
+        print("-e : extraction")
+        print("-r : recontruction")
+        print("-t : traduction")
+        print('-c : "complet" , extraction + reconstruction + traduction + modifications\n')
         exit(1)
     
     chemin_absolu_script = os.path.dirname(os.path.abspath(__file__))
