@@ -3,6 +3,7 @@ import sys
 import fonctions as fnc
 
 syntaxe = "python at-rev.py [nom-du-fichier-input] <etape-finale-processus> [nom-du-fichier-output] (options)"
+etapes_process = ["-e","-r","-t","-c"]
 
 def erreur_syntaxe():
     print("Syntaxe :",syntaxe)
@@ -19,8 +20,6 @@ def aide():
     print()
 
 if __name__ == "__main__":
-
-    etapes_process = ["-e","-r","-t","-c"]
 
     if len(sys.argv) == 2 and sys.argv[1] == "-h":
         print("Aide :\n")
