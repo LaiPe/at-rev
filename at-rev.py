@@ -2,8 +2,13 @@ import os
 import sys
 import fonctions as fnc
 
+syntaxe = "python at-rev.py [nom-du-fichier-input] <etape-finale-processus> [nom-du-fichier-output] (options)"
+
 def erreur_syntaxe():
-    print("\nSyntaxe : python at-rev.py <nom-du-fichier-input> <etape-finale-processus> <nom-du-fichier-output> (options)\n")
+    print("Syntaxe :",syntaxe)
+    print("Pour plus d'aide concernant la syntaxe, essayez 'python at-rev.py -h'")
+def aide():
+    print("Syntaxe :",syntaxe,"\n")
     print("<etape-finale-processus> :")
     print("-e : extraction")
     print("-r : recontruction")
@@ -16,18 +21,29 @@ def erreur_syntaxe():
 if __name__ == "__main__":
 
     etapes_process = ["-e","-r","-t","-c"]
-    if len(sys.argv) < 3 or not(sys.argv[2] in etapes_process):
+
+    if len(sys.argv) == 2 and sys.argv[1] == "-h":
+        print("Aide :\n")
+        aide()
+        exit(0)
+    
+    if len(sys.argv) < 4:
+        print("Pas assez d'arguments")
         erreur_syntaxe()
         exit(1)
+    if not(sys.argv[2] in etapes_process):
+        print("Paramètre de processus invalide")
+        erreur_syntaxe()
+        exit(2)
     
     timeCode = True
     for i in range(4,len(sys.argv)):
         if sys.argv[i] == "--no-timecodes":
             timeCode = False
         else:
-            print("Option invalide")
+            print("Option invalide :",sys.argv[i])
             erreur_syntaxe()
-            exit(1)
+            exit(3)
             
     chemin_absolu_script = os.path.dirname(os.path.abspath(__file__))
     glossaire = fnc.init_glossaire(chemin_absolu_script)
