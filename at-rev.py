@@ -55,7 +55,7 @@ if __name__ == "__main__":
     input.close()
     print("\n- Traitement du fichier",sys.argv[1])
 
-    liste_lignes_vo = fnc.extraction(texte)
+    liste_lignes_vo = fnc.extraction(texte,timeCode)
     print("- Extraction")
     if sys.argv[2] == "-e":
         fnc.ecriture(output,liste_lignes_vo,timeCode)
