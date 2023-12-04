@@ -1,4 +1,6 @@
 env
-input.htm
-output.txt
 __pycache__
+
+*.htm
+*.html
+*.txt
