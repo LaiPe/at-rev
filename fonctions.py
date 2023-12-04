@@ -46,7 +46,9 @@ def reconstruction(li_content):
             else:
                 temp += ligne + " "
         li_reconstruct += [temp_minute]
-
+    if len(temp) > 0:
+        temp_minute += [temp]
+        li_reconstruct += [temp_minute] # flush final
     return li_reconstruct
 
 def compta_caracteres(li):
