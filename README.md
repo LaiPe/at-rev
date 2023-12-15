@@ -25,7 +25,7 @@ Vous trouverez ici l'ensemble des informations relatives à l'**installation** d
 	```
 	pip install -r requirements.txt
 	```
-6. Pensez à activez de l'API Google Cloud Translation depuis votre compte Google Cloud.
+6. Pensez à activez l'API Google Cloud Translation depuis votre compte Google Cloud.
 7. Connexion à votre compte Google Cloud depuis votre machine:
 	- Téléchargez et installez l'outil d’authentification [gcloud CLI](https://cloud.google.com/sdk/docs/install?hl=fr)
 	- Ouvrez gcloud CLI et authentifiez vous avec vos identifiants de compte Google Cloud :
