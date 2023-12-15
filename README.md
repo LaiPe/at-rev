@@ -33,7 +33,7 @@ Vous trouverez ici l'ensemble des informations relatives à l'**installation** d
 		gcloud auth application-default login
 		```
 ## Utilisation
-Afin de pouvoir être utilisé, AT-REV a besoin d'un fichier d'entrée contenant la transcription fournie par REV lors de la réclamation d'une mission de sou-titrage.
+Afin de pouvoir être utilisé, AT-REV a besoin d'un fichier d'entrée contenant la transcription fournie par REV lors de la réclamation d'une mission de sous-titrage.
 ### Extraction de la transcription
 1. Connectez-vous à votre espace travailleur sur REV. 
 2. Accédez à la page *Projet* de votre travail en cours.
@@ -52,7 +52,7 @@ Pour plus de clarté dans votre travail, nous vous recommandons de **renommer** 
 	```
 3. Enfin, lancez AT-REV avec cette commande :
 	```
-	python at-rev.py <transcription.htm> -c output.txt
+	python at-rev.py transcription.htm -c output.txt
 	```
 	> Prenez bien soin de remplacez `<transcription.htm>` par le nom réel de votre fichier de transcription.
 
