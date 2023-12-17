@@ -23,7 +23,7 @@ Vous trouverez ici l'ensemble des informations relatives à l'**installation** d
 	> Prenez bien soin de remplacez `<version>` par la version réelle de votre intallation Python. Utilisez `python3 --version` pour la connaître.
 5. Définissez un nouvel environnement de travail:
 	```
-	python -m venv env
+	python3 -m venv env
 	```
 6. Activez votre environnement :
 	```
