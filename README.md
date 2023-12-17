@@ -36,31 +36,31 @@ Vous trouverez ici l'ensemble des informations relatives à l'**installation** d
 
 4. Ouvrez un terminal Shell Bash dans ce répertoire et installez l'utilitaire `venv`:
 
-```
-sudo apt install python<version>-venv
-```
+  ```
+  sudo apt install python<version>-venv
+  ```
 
 > Prenez bien soin de remplacez `<version>` par la version réelle de votre installation Python. Utilisez `python3 --version` pour la connaître.
 
 5. Définissez un nouvel environnement de travail:
 
-```
-python3 -m venv env
-```
+  ```
+  python3 -m venv env
+  ```
 
 6. Activez votre environnement :
 
-```
-source ./env/bin/activate
-```
+  ```
+  source ./env/bin/activate
+  ```
 
 > Si l’exécution vous est refusée, pensez à vous accorder les droits d’exécution avec `chmod +x ./env/bin/activate`.
 
 7. Téléchargez l'ensemble des dépendances :
 
-```
-pip install -r requirements.txt
-```
+  ```
+  pip install -r requirements.txt
+  ```
 
 8. Authentifiez-vous à votre compte Google Cloud en suivant les instructions fournies [ici](https://cloud.google.com/sdk/docs/install?hl=fr)
 
@@ -70,23 +70,23 @@ pip install -r requirements.txt
 
 4. Ouvrez un terminal PowerShell dans ce répertoire et définissez un nouvel environnement de travail avec `venv`:
 
-```
-python -m venv env
-```
+  ```
+  python -m venv env
+  ```
 
 5. Activez votre environnement :
 
-```
-.\env\Scripts\Activate
-```
+  ```
+  .\env\Scripts\Activate
+  ```
 
 > Si l’exécution vous est refusée, assurez-vous que l'exécution de scripts PowerShell soit autorisée. [*(plus d'informations)*](https://learn.microsoft.com/fr-fr/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.4)
 
 6. Téléchargez l'ensemble des dépendances :
 
-```
-pip install -r requirements.txt
-```
+  ```
+  pip install -r requirements.txt
+  ```
 
 7. Authentifiez-vous à votre compte Google Cloud en suivant les instructions fournies [ici](https://cloud.google.com/sdk/docs/install?hl=fr)
 
@@ -126,9 +126,9 @@ Pour plus de clarté dans votre travail, nous vous recommandons de **renommer** 
 
 3. Enfin, lancez AT-REV avec cette commande :
 
-```
-python at-rev.py transcription.htm -c output.txt
-```
+  ```
+  python at-rev.py transcription.htm -c output.txt
+  ```
 
 > Prenez bien soin de remplacez `transcription.htm` par le nom réel de votre fichier de transcription.
 
@@ -139,7 +139,7 @@ Une fois le processus d'AT-REV terminé, vous pouvez ouvrir avec l'outil de trai
   
 
 Pour plus d'informations sur les options que propose AT-REV, n’hésitez pas à consulter l'aide associé au programme avec la commande :
-
-```
-python at-rev.py -h
-```
+  
+  ```
+  python at-rev.py -h
+  ```
